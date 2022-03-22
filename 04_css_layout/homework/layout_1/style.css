@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  border: 2px solid gray;
+}
+
+header, footer {
+  height: 100px;
+  background-color: lightgray;
+  clear: both;
+}
+
+section, div {
+  height: 200px;
+  float: left;
+}
+
+section {
+  width: 33.333%;
+}
+
+div {
+  width: 50%;
+}/*# sourceMappingURL=style.css.map */

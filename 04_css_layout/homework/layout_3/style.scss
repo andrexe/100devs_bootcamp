@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    border: 2px solid gray;
+}
+header, footer {
+    background-color: lightgray;
+    height: 100px;
+    clear: both;
+}
+aside, section, article {
+    float: left;
+    height: 200px;
+}
+aside, article {
+    width: 20%;
+}
+section {
+    width: 40%;
+}
