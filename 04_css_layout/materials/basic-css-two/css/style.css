@@ -7,7 +7,7 @@ li {
 
 section {
   height: 300px;
-  background-color: #d199ff;
+  background-color: hsl(273deg, 100%, 80%);
   border: 5px solid gold;
 }
 
@@ -19,7 +19,7 @@ h1 {
 }
 
 footer {
-  background-color: #301600;
+  background-color: rgb(48, 22, 0);
   height: 300px;
   width: 70%;
 }
