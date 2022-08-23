@@ -10,3 +10,6 @@ Exercise files from #100devs Software Engineering Bootcamp
 Switched to 2022 course videos at this point
 
 - [x] Class 07 - Responsive CSS
+- [x] Class 08 - Bad CSS
+- [x] Class 11 - CSS Layout & Flexbox
+- [x] Class 12 - JavaScript
