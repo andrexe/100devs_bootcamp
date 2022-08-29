@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine JS & Tailwind CSS Temperature Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{
+cTemp: 0,
+fTemp: 32,
+seasonBG: `bg-[url(https:/\/source.unsplash.com/random/1600x900/?winter)]`,
+}" 
+x-init="
+    $watch('cTemp', cTemp => seasonBG = checkSeason(cTemp))
+"
+class="h-screen bg-emerald-700 flex items-center justify-center bg-cover" x-bind:class="seasonBG">
+    <section
+        class="h-80 flex flex-col items-center justify-evenly bg-gradient-to-b from-slate-100/90 to-slate-300/90 shadow-2xl rounded-lg p-6">
+        <a href="./index.html" class="text-cyan-700 underline text-center">Basic Version</a>
+        <h1 class="text-center font-bold text-2xl">Tailpine Temperature Converter</h1>
+        <form action="" class="w-96 flex flex-col">
+            <p class="flex justify-between items-baseline">
+                <label for="celsius" class="text-lg">Temp in Celsius</label>
+                <input class="text-black p-2 border-2 text-right" type="number" name="celsius" id="celsius"
+                    x-model="cTemp" @input="fTemp = cToF(cTemp); checkSeason">
+            </p>
+            <p class="flex justify-between items-baseline">
+                <label for="fahrenheit" class="text-lg">Temp in Fahrenheit</label>
+                <input class="text-black p-2 border-2 text-right" type="number" name="fahrenheit" id="fahrenheit"
+                    x-model="fTemp" @input="cTemp = fToC(fTemp)">
+            </p>
+        </form>
+    </section>
+
+    <script>
+        function fToC(temp) {
+            return (temp - 32) * 5 / 9;
+        };
+        function cToF(temp) {
+            return temp * 9 / 5 + 32;
+        };
+        function checkSeason(temp) {
+            if (temp >= 10 && temp < 20) {
+                return `bg-[url(https:/\/source.unsplash.com/random/1600x900/?spring)]`;
+            } else if (temp < 10) { return `bg-[url(https:/\/source.unsplash.com/random/1600x900/?winter)]` }
+            else return `bg-[url(https:/\/source.unsplash.com/random/1600x900/?summer)]`
+        }
+    </script>
+
+</body>
+
+</html>
