@@ -13,3 +13,6 @@ Switched to 2022 course videos at this point
 - [x] Class 08 - Bad CSS
 - [x] Class 11 - CSS Layout & Flexbox
 - [x] Class 12 - JavaScript
+- [x] Class 13 - JavaScript Examples
+- [x] Class 15 - Freelancing
+- [x] Class 16 - JavaScript Loops
