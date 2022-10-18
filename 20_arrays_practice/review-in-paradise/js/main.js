@@ -1,0 +1,41 @@
+// *Variables*
+// Declare a variable, reassign it to your favorite food, and alert the value
+
+const favFood = 'fries';
+alert(favFood);
+
+//Declare a variable, assign it a string, alert the second character in the string (Use your google-fu and the MDN)
+
+const string = 'string';
+alert(string[1]);
+
+// *Functions*
+// Create a function that takes in 3 numbers. Divide the first two numbers and multiply the last. Alert the product. Call the function.
+
+const alertDivMulti = (a, b, c) => alert(a / b * c);
+alertDivMulti(6, 3, 5);
+
+// Create a function that takes in 1 number. Console log the cube root of the number. Call the function.
+
+const logCubeRoot = (x) => console.log(Math.cbrt(x).toFixed(4));
+logCubeRoot(27);
+
+// *Conditionals*
+//Create a function that takes in a month. If it is a summer month alert "YAY". If another other month, alert "Booo"
+
+const checkSummerMonth = (string) => {
+    const summerMonths = ['june', 'july', 'august'];
+    alert(summerMonths.some(x => x === string.toLowerCase()) ? 'YAY' : 'Booo')
+};
+
+checkSummerMonth('February')
+
+//*Loops*
+//Create a function that takes in a number. Console log every number from 1 to that number while skipping multiples of 5.
+
+let IteratorSkipFive = (n) => {
+    for (let i = 1; i <= n; i++) {
+        if (i % 5 !== 0) { console.log(i) }
+    }
+}
+IteratorSkipFive(11);
